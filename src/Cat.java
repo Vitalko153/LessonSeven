@@ -19,6 +19,7 @@ public class Cat {
         }
         else{
             System.out.println(name + " еще голоден.");
+
         }
     }
 }
