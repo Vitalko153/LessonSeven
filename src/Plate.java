@@ -5,6 +5,7 @@ public class Plate {
 
     Plate(int food){
         this.food = food;
+        
     }
 
     public static boolean plateFull(int appetite){

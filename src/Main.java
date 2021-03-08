@@ -20,6 +20,7 @@ public class Main {
         for (int y = 0; y < allCat.length; y++) {
                 allCat[y].eat();
                 System.out.println(Plate.food);
+
             }
         }
     }
