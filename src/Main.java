@@ -13,13 +13,11 @@ public class Main {
 
         for (int x = 0; x < allCat.length; x++) {
             allCat[x].eat();
-            System.out.println(Plate.food);
         }
         plate.addFood();
 
         for (int y = 0; y < allCat.length; y++) {
                 allCat[y].eat();
-                System.out.println(Plate.food);
 
             }
         }
