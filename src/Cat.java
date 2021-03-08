@@ -1,20 +1,24 @@
 public class Cat {
     public String name;
-    private boolean hunger = false;
-    private int appetite;
+    boolean hunger;
+    int appetite;
 
-    Cat(String name, int appetite){
+    Cat(String name, int appetite, boolean hunger) {
         this.name = name;
         this.appetite = appetite;
+        this.hunger = hunger;
     }
 
-    public void eat(){
-        hunger = Plate.plateFull(appetite);
-        if(hunger == true){
-            System.out.println(name + " сытый!");
+    public void eat() {
+        if (!hunger && Plate.plateFull(appetite)) {
+            Plate.food -= appetite;
+            hunger = true;
         }
-        else if(hunger == false){
-            System.out.println(name + " все еще голоден.");
+        if(hunger){
+            System.out.println(name + " сытый.");
+        }
+        else{
+            System.out.println(name + " еще голоден.");
         }
     }
 }

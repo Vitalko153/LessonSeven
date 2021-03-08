@@ -8,10 +8,13 @@ public class Plate {
     }
 
     public static boolean plateFull(int appetite){
-        if(appetite < food){
-            food -= appetite;
+        if(appetite <= food){
             return true;
         }
         return false;
+    }
+
+    public void addFood(){
+        food += 50;
     }
 }
